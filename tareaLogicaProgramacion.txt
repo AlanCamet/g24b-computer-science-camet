@@ -1,0 +1,47 @@
+1.- "Invitar a un amigo a comer"
+	Tener un amigo
+	preguntarle si queire comer
+	invitarlo a un restaurante
+
+2.-"Invitar a sus amigos a ir al cine"
+	Escoger el grupo de amigos que invitaré al cine
+	Preguntar si quieren ir al cine
+	Invitar a los amigos y esperar la confirmacion de los que puedan
+
+3.-"Realizar una calculadora que sume 2 números"
+	INICIO
+	Recibir numUno
+	Recibir numDos
+	Escoger operación (multiplicacion, division, resta, suma)
+	Realizar operacíon
+	Mostrar resultado
+	FIN
+
+4.-"Crear un programa que pueda calcular el perímetro y área de cualquier figura"
+	INICIO
+	Identificar figura
+	Recibir datos ncesarios para la operación
+	Si es cuadrado, realizar operación correspondiente
+	Si es círculo, realizar operación correspondiente
+	Si es triangulo, realizar operación correspondiente
+	Mostrar ambos resultados
+	FIN
+
+5.-"Calcular la suma de los numeros que hat entre 1 y un numero que el usuario ingrese por teclado"
+	INICIO
+	Reibir numDos
+	Si, numDos < 2 marcar erros y volver a solucitar numDos	
+	Si no, realizar suma de 1+numDos
+	Mostrar resultado
+	FIN
+
+6.-"Realizar un programa que calcule el factorial de un numero"
+	INICIO
+	Recibir num
+	let resultado
+	Mientras (num != 1){
+		resultado = num * num-1
+		num-1
+		}
+	Mostrar resultado
+	FIN
