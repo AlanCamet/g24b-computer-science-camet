@@ -1,37 +1,21 @@
-let matrices = [
-    {
-        posUno: 5,
-        posDos: 7,
-        posTre: 9,
-        posCua: 3
-    },
-    {
-        posUno: 3,
-        posDos: 6,
-        posTre: 2,
-        posCua: 8
-    },
-]
-let resultado ={
-    posUno: 0,
-    posDos: 0,
-    posTre: 0,
-    posCua: 0
-}
+//variables
+let fibo = [0,1]
 
-
-function imprimir(mensaje){
+function imprimir (mensaje){
     document.write(mensaje)
     document.write("<br>")
     document.write("<br>")
 }
 
-function sumaMatrices(){
-    return resultado.posUno = matrices[0].posUno + matrices[1].posUno
-    imprimir("Posición Uno: " + resultado.posUno)
+imprimir(fibo[0])
+imprimir(fibo[1])
+
+function fibonacci(cantidad){
+    for (var i = 2; i<cantidad ; i++){
+        var resultado = fibo[0]+fibo[1]
+        imprimir(resultado)
+        fibo[0] = fibo[1]
+        fibo[1] = resultado
+    }
 }
-sumaMatrices()
-function sumaMatricesDos(){
-    return resultado.posDos = matrices[0].posDos + matrices[1].posDos
-}
-imprimir("Posición Dos: " + sumaMatricesDos())
+fibonacci(20)

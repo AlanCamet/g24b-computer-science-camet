@@ -1,25 +1,37 @@
-const respuesta = "trabajar";
-let ahorro = 0
-let tiempo = 0
-let a
-let final = "final";
-function alerta(){
-    var ingresa = prompt("¿Que estas haciendo?");
-    
-    if(ingresa != respuesta){
-        ahorro = ahorro + 5; 
-        console.log(ahorro)
-    }
-    tiempo++
-    console.log(tiempo)
-    if(tiempo > 8){
-        stopInterval()
-        document.write("Tu ahorro fue de: "+ ahorro)
-    }
-};
-a = setInterval(alerta,10000)
-
-function stopInterval(){
-    clearInterval(a)
-    console.log(final)
+let matrices = [
+    {
+        posUno: 5,
+        posDos: 7,
+        posTre: 9,
+        posCua: 3
+    },
+    {
+        posUno: 3,
+        posDos: 6,
+        posTre: 2,
+        posCua: 8
+    },
+]
+let resultado ={
+    posUno: 0,
+    posDos: 0,
+    posTre: 0,
+    posCua: 0
 }
+
+
+function imprimir(mensaje){
+    document.write(mensaje)
+    document.write("<br>")
+    document.write("<br>")
+}
+
+function sumaMatrices(){
+    return resultado.posUno = matrices[0].posUno + matrices[1].posUno
+    imprimir("Posición Uno: " + resultado.posUno)
+}
+sumaMatrices()
+function sumaMatricesDos(){
+    return resultado.posDos = matrices[0].posDos + matrices[1].posDos
+}
+imprimir("Posición Dos: " + sumaMatricesDos())
