@@ -9,11 +9,16 @@ select.addEventListener("change", () =>{
     if (type === "all"){
         clean()
         printAll(pokemonesArray)
-    }  else if(type === "grass"){
+    }  else{
         clean()
+        for(let i=0; i<pokemonesArray.length; i++){
+            if(pokemonesArray[i].type === type){
+                printCard(pokemonesArray[i])
+                console.log(pokemonesArray[i])
+            }        
+        }
     }
 })
-
 
 async function getPokemon(pokemon){
     /* fetch('https://pokeapi.co/api/v2/pokemon/')
@@ -45,7 +50,7 @@ async function getPokemon(pokemon){
         }
         printAll(pokemonesArray)
     }
-
+    
 function createData(pokemon){
     /* console.log(pokemon) */
     const newPokemon = {
