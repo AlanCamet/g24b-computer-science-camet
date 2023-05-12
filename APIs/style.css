@@ -1,0 +1,14 @@
+#container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card {
+    margin: 10px;
+    padding: 10px;
+    border: 2px solid black
+}
+
+.name{
+    text-transform: uppercase;
+}
