@@ -1,7 +1,25 @@
 const container = document.querySelector("#container")
 const select = document.querySelector(("#type"))
+const input = document.querySelector("input")
+const buttonSearch = document.querySelector("#search")
+let search = "";
 let type = "all";
 let pokemonesArray = [];
+
+buttonSearch.addEventListener("click", (event) =>{
+    event.preventDefault()
+    clean()
+    search = input.value
+    console.log(search)
+    
+    for(let i=0; i<pokemonesArray.length; i++){
+        if(pokemonesArray[i].name === search){
+            printCard(pokemonesArray[i])
+            console.log(pokemonesArray[i])
+        }        
+    }
+
+})
 
 select.addEventListener("change", () =>{
     type = select.value
