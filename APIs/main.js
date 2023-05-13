@@ -11,32 +11,29 @@ buttonSearch.addEventListener("click", (event) =>{
     clean()
     search = input.value
     console.log(search)
-    
     for(let i=0; i<pokemonesArray.length; i++){
         if(pokemonesArray[i].name === search){
             printCard(pokemonesArray[i])
             console.log(pokemonesArray[i])
-        }        
-    }
-
+    }  }
 })
+
 
 select.addEventListener("change", () =>{
     type = select.value
-    console.log(type)
-    if (type === "all"){
+    if(type === "all"){
         clean()
         printAll(pokemonesArray)
-    }  else{
+    } else {
         clean()
         for(let i=0; i<pokemonesArray.length; i++){
             if(pokemonesArray[i].type === type){
                 printCard(pokemonesArray[i])
                 console.log(pokemonesArray[i])
-            }        
-        }
-    }
+        } 
+    }}
 })
+
 
 async function getPokemon(pokemon){
     /* fetch('https://pokeapi.co/api/v2/pokemon/')
@@ -45,8 +42,7 @@ async function getPokemon(pokemon){
             for(let i = 0; i<data.results.length; i++){
                 fetch(data.results[i].url)
                 .then(response => response.json())
-                .then(data => createData(data))
-                
+                .then(data => createData(data))  
             }
         })
         .then(() => {
@@ -56,7 +52,6 @@ async function getPokemon(pokemon){
             }
         }) */
         
-
         let request = await fetch('https://pokeapi.co/api/v2/pokemon/')
         let response = await request.json()
         let data = response.results
@@ -81,9 +76,7 @@ function createData(pokemon){
     pokemonesArray.push(newPokemon)
 }
 
-    
-
-  function printCard (newPokemon){
+function printCard (newPokemon){
     const name = document.createElement("h2")
     name.classList.add("name")
     name.textContent = `${newPokemon.name}`
@@ -103,14 +96,24 @@ function createData(pokemon){
     const div = document.createElement("div")
     div.classList.add("card")
     div.appendChild(name)
+    div.appendChild(img)
     div.appendChild(id)
     div.appendChild(type)
-    div.appendChild(img)
+    
+    if(newPokemon.type === "grass"){
+        div.classList.add("grass")
+    } else if(newPokemon.type === "bug"){
+        div.classList.add("bug")
+    } else if(newPokemon.type === "water"){
+        div.classList.add("water")
+    } else if(newPokemon.type === "fire"){
+        div.classList.add("fire")
+    } else if(newPokemon.type === "normal"){
+        div.classList.add("normal")
+    }
 
     container.appendChild(div)
-  }  
-  
-/* } */
+}  
 
 function clean(){
     container.innerHTML = ''
@@ -122,8 +125,4 @@ function printAll(pokemones){
     }
 }
 
-
 getPokemon()
-
-    
-    
