@@ -58,8 +58,7 @@ async function getPokemon(pokemon){
         for(let i = 0; i<data.length; i++){
             let request = await fetch(data[i].url)
             let response = await request.json()
-            createData(response)
-            
+            createData(response)      
         }
         printAll(pokemonesArray)
     }
@@ -70,10 +69,12 @@ function createData(pokemon){
         name: pokemon.name,
         img: pokemon.sprites.front_default,
         id: pokemon.id,
-        type: pokemon.types[0].type.name
+        type: pokemon.types[0].type.name,
+        ability: pokemon.abilities[0].ability.name
 
     }
     pokemonesArray.push(newPokemon)
+   
 }
 
 function printCard (newPokemon){

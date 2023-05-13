@@ -81,12 +81,20 @@ form button{
     margin: 10px;
     
 }
+button:hover{
+    width: 78px;
+    height: 32px;
+    box-shadow: 0 0 40px black;
+    font-size: 20px;
+}
 form select{
     border-radius: 20px;
     height: 30px;
-    width: 80px;
+    width: 95px;
     border: 0 solid;
-    font-size: 18px;}
+    font-size: 18px;
+    padding-left: 10px;
+}
 
 header {
     display: flex;
@@ -112,4 +120,26 @@ header {
 
 .normal{
     background-image: linear-gradient(-225deg, #E3FDF5 0%, #FFE6FA 100%);
+}
+footer{
+    background: rgb(75,75,75);
+    background: -moz-radial-gradient(circle, rgba(75,75,75,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 84%, rgba(0,0,0,1) 100%, rgba(255,0,0,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(75,75,75,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 84%, rgba(0,0,0,1) 100%, rgba(255,0,0,1) 100%);
+    background: radial-gradient(circle, rgba(75,75,75,1) 0%, rgba(0,0,0,1) 75%, rgba(0,0,0,1) 84%, rgba(0,0,0,1) 100%, rgba(255,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#4b4b4b",endColorstr="#ff0000",GradientType=1);
+
+    height: 200px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+footer div .copy {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+}
+footer div .alan{
+    font-size: 20px;
+    text-align: center;
+    color:darkred;
 }
