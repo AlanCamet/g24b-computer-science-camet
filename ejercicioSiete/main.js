@@ -1,24 +1,5 @@
-let matrices = [
-    {
-        posUno: 5,
-        posDos: 7,
-        posTre: 9,
-        posCua: 3
-    },
-    {
-        posUno: 3,
-        posDos: 6,
-        posTre: 2,
-        posCua: 8
-    },
-]
-let resultado ={
-    posUno: 0,
-    posDos: 0,
-    posTre: 0,
-    posCua: 0
-}
-
+let matrices = [[5,3,6,3],[7,2,5,7]]
+let resultado 
 
 function imprimir(mensaje){
     document.write(mensaje)
@@ -26,12 +7,15 @@ function imprimir(mensaje){
     document.write("<br>")
 }
 
-function sumaMatrices(){
-    return resultado.posUno = matrices[0].posUno + matrices[1].posUno
-    imprimir("Posición Uno: " + resultado.posUno)
+
+function sumaMatrices(posicion){
+    var suma = matrices[0][posicion-1] + matrices[1][posicion-1]
+    imprimir(suma)
 }
-sumaMatrices()
-function sumaMatricesDos(){
+
+/* function sumaMatricesDos(){
     return resultado.posDos = matrices[0].posDos + matrices[1].posDos
 }
-imprimir("Posición Dos: " + sumaMatricesDos())
+imprimir("Posición Dos: " + sumaMatricesDos()) */
+
+console.log(sumaMatrices(3))
